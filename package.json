@@ -1,0 +1,36 @@
+{
+  "name": "gulp-svg-less",
+  "version": "1.0.0",
+  "description": "Gulp plugin that embeds svg images inside a single LESS file using data-uri",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdl/gulp-svg-less.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "svg",
+    "less",
+    "inline",
+    "minification"
+  ],
+  "author": {
+    "name": "Jan Bevers",
+    "email": "jbevers@sdl.com"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "css": "^2.2.1",
+    "less": "^2.6.0",
+    "mocha": "^2.4.5",
+    "stream-assert": "^2.0.3"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1",
+    "xmldom": "^0.1.22"
+  }
+}
