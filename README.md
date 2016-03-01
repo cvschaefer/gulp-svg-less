@@ -43,7 +43,7 @@ Default value: `icon-`
 
 A string to prefix all mixin names with.
 
-### options.outputMixin
+#### options.outputMixin
 Type: `Boolean`
 Default value: `false`
 
