@@ -49,17 +49,12 @@ module.exports = function (options) {
      * @param {String} data Contents of svg file.
      */
     function buildSvgDataURI(svgContent) {
-        return svgContent
+        return encodeURIComponent(svgContent
             .replace(/^<\?xml.*?>/gmi, '') // Xml declaration
             .replace(/<\!\-\-(.*(?=\-\->))\-\->/gmi, '') // Comments
             .replace(/[\r\n]/gmi, '') // Line breaks
             .replace(/(\r\n|\n|\r)$/, '') // New line end of file
-            .replace(/\t/gmi, ' ') // Tabs (replace with space)
-            .replace(/%/gmi, '%25') // %
-            .replace(/</gmi, '%3C') // <
-            .replace(/>/gmi, '%3E') // >
-            .replace(/#/gmi, '%23') // #
-            .replace(/\"/gmi, '\''); // "
+            .replace(/\t/gmi, ' ')).replace(/%2F/g, "/"); // Tabs (replace with space)
     }
 
     /**
